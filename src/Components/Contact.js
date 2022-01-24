@@ -1,7 +1,9 @@
 import React from 'react';
 import "./Css/Contact.css"
+import Nav from './Nav';
 export default function Contact() {
   return <div>
+  <Nav/>
      <div>
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
         {/*---- Include the above in your HEAD tag --------*/}

@@ -24,29 +24,33 @@ export default function SignupPage() {
                         <div className="d-flex flex-row align-items-center mb-4">
                           <i className="fas fa-user fa-lg me-3 fa-fw" />
                           <div className="form-outline flex-fill mb-0">
-                            <input type="text" id="form3Example1c" className="form-control" onChange={(e)=>setName(e.target.value)} />
-                            <label className="form-label" htmlFor="form3Example1c">Your Name</label>
+                          <label className="form-label" htmlFor="form3Example1c">Your Name</label>
+                            <input type="text" id="form3Example1c" placeholder='Enter Your Name' className="form-control" onChange={(e)=>setName(e.target.value)} />
+                            
                           </div>
                         </div>
                         <div className="d-flex flex-row align-items-center mb-4">
                           <i className="fas fa-envelope fa-lg me-3 fa-fw" />
                           <div className="form-outline flex-fill mb-0">
-                            <input type="email" id="form3Example3c" className="form-control" onChange={(e)=>setEmail(e.target.value)}/>
-                            <label className="form-label" htmlFor="form3Example3c">Your Email</label>
+                          <label className="form-label" htmlFor="form3Example3c">Your Email</label>
+                            <input type="email" id="form3Example3c" placeholder='Enter Your Email ' className="form-control" onChange={(e)=>setEmail(e.target.value)}/>
+                            
                           </div>
                         </div>
                         <div className="d-flex flex-row align-items-center mb-4">
                           <i className="fas fa-lock fa-lg me-3 fa-fw" />
                           <div className="form-outline flex-fill mb-0">
-                            <input type="password" id="form3Example4c" className="form-control" onChange={(e)=>setPass1(e.target.value)} />
-                            <label className="form-label" htmlFor="form3Example4c">Password</label>
+                          <label className="form-label" htmlFor="form3Example4c">Password</label>
+                            <input type="password" id="form3Example4c" placeholder='Enter Password' className="form-control" onChange={(e)=>setPass1(e.target.value)} />
+                            
                           </div>
                         </div>
                         <div className="d-flex flex-row align-items-center mb-4">
                           <i className="fas fa-key fa-lg me-3 fa-fw" />
                           <div className="form-outline flex-fill mb-0">
-                            <input type="password" id="form3Example4cd" className="form-control" onChange={(e)=>setPass2(e.target.value)} />
-                            <label className="form-label" htmlFor="form3Example4cd">Repeat your password</label>
+                          <label className="form-label" htmlFor="form3Example4cd">Repeat your password</label>
+                            <input type="password" id="form3Example4cd" placeholder='Re-Enter Password' className="form-control" onChange={(e)=>setPass2(e.target.value)} />
+                            
                           </div>
                         </div>
                         <div className="form-check d-flex justify-content-center mb-5">
@@ -56,8 +60,10 @@ export default function SignupPage() {
                           </label>
                         </div>
                         <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                          <button type="button" className="btn btn-primary btn-lg" onClick={handleRegister}>Register</button>
+                          <button type="button" className="btn btn-primary btn-lg" onClick={handleRegister}>Register</button><span>&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;   </span>
+                          <button type="button" className="btn btn-primary btn-lg" onClick={handleRegister}>Back</button>
                         </div>
+                        
                       </form>
                     </div>
                     <div className="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">

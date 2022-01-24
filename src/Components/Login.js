@@ -21,7 +21,7 @@ export default function Login() {
     e.preventDefault();
     if (uname === "hello" && upass === "hello") {
       toast.success('Login Successful',{position:toast.POSITION.TOP_CENTER,autoClose:1500})
-      navigate("/home");
+     setTimeout(()=>{ navigate("/home")},1800)
       localStorage.setItem("auth", true);
     } else {
       toast.error('Incorrect Details',{position:toast.POSITION.TOP_CENTER,autoClose:1500})
@@ -47,29 +47,31 @@ export default function Login() {
                       <p>Please login to your account</p>
 
                       <div className="form-outline mb-4">
+                      <label className="form-label" >Username</label>
                         <input
                           type="text"
                           id="form2Example11"
                           className="form-control"
-                          placeholder="Enter Username"
+                          placeholder="Enter Your Username"
                           onChange={(e) => setUname(e.target.value)}
                         />
-                        <label className="form-label">Username</label>
+                        
                       </div>
 
                       <div className="form-outline mb-4">
-                        <input
-                          type="text"
-                          id="form2Example22"
-                          className="form-control"
-                          onChange={(e) => setUpass(e.target.value)}
-                        />
-                        <label
+                      <label
                           className="form-label"
                           
                         >
                           Password
                         </label>
+                        <input
+                          type="text"
+                          id="form2Example22"
+                          className="form-control" placeholder="Enter Your Password"
+                          onChange={(e) => setUpass(e.target.value)}
+                        />
+                       
                       </div>
 
                       <div className="text-center pt-1 mb-5 pb-1">
@@ -78,7 +80,7 @@ export default function Login() {
                           onClick={handleLogin}
                         >
                           Log in
-                        </button>
+                        </button><span> &nbsp; &nbsp;&nbsp;&nbsp;       </span>
                         <a className="text-muted" href="/forgotpassword">
                           Forgot password?
                         </a>

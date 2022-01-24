@@ -1,11 +1,13 @@
 import React from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
-
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'
 export default function Nav() {
     const navigate=useNavigate();
     const handleLogout =(e)=>{
         e.preventDefault();
-        navigate("/");
+        toast.success('Logout Successful',{position:toast.POSITION.TOP_CENTER,autoClose:1500})
+        setTimeout(()=>{ navigate("/")},1800)
         localStorage.removeItem("auth");
     }
   return <div>
